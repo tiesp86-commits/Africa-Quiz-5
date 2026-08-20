@@ -1,0 +1,263 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #064e3b, #0f766e);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    color: #222;
+}
+
+.app {
+    width: 100%;
+    max-width: 520px;
+}
+
+.screen {
+    background: white;
+    border-radius: 25px;
+    padding: 25px 20px;
+    text-align: center;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+}
+
+.hidden {
+    display: none !important;
+}
+
+/* MENU */
+
+.logo {
+    font-size: 70px;
+    margin-bottom: 10px;
+}
+
+h1 {
+    color: #087f5b;
+    font-size: 38px;
+    margin-bottom: 10px;
+}
+
+.screen > p {
+    color: #666;
+    font-size: 18px;
+    margin-bottom: 25px;
+}
+
+.info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+.info span {
+    background: #ecfdf5;
+    color: #065f46;
+    padding: 14px 8px;
+    border-radius: 12px;
+    font-weight: bold;
+}
+
+/* PULSANTI */
+
+button {
+    width: 100%;
+    border: none;
+    border-radius: 15px;
+    padding: 16px;
+    background: #087f5b;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #066c4d;
+}
+
+.secondary {
+    background: #e5e7eb;
+    color: #333;
+    margin-top: 12px;
+}
+
+.secondary:hover {
+    background: #d1d5db;
+}
+
+/* QUIZ */
+
+.stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 8px;
+    margin-bottom: 12px;
+}
+
+.stats span {
+    background: #f1f5f9;
+    padding: 11px 5px;
+    border-radius: 12px;
+    font-weight: bold;
+}
+
+.timer-bar {
+    width: 100%;
+    height: 10px;
+    background: #e5e7eb;
+    border-radius: 20px;
+    overflow: hidden;
+    margin-bottom: 18px;
+}
+
+#timerProgress {
+    width: 100%;
+    height: 100%;
+    background: #22c55e;
+    border-radius: 20px;
+    transition: width 1s linear, background 0.3s;
+}
+
+.question-count {
+    color: #666;
+    margin-bottom: 12px;
+}
+
+.level {
+    display: inline-block;
+    background: #d1fae5;
+    color: #065f46;
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.question-box {
+    background: #f8fafc;
+    border-radius: 18px;
+    padding: 25px 15px;
+    margin-bottom: 18px;
+}
+
+.question-box h2 {
+    font-size: 23px;
+    line-height: 1.4;
+}
+
+/* RISPOSTE */
+
+#answers {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.answer {
+    background: white;
+    color: #222;
+    border: 2px solid #e5e7eb;
+    text-align: left;
+    padding: 14px;
+    font-size: 17px;
+}
+
+.answer:hover:not(:disabled) {
+    background: #ecfdf5;
+    border-color: #087f5b;
+}
+
+.answer:disabled {
+    cursor: default;
+}
+
+.answer.correct {
+    background: #22c55e;
+    border-color: #16a34a;
+    color: white;
+}
+
+.answer.wrong {
+    background: #ef4444;
+    border-color: #dc2626;
+    color: white;
+}
+
+/* SPIEGAZIONE */
+
+.explanation {
+    background: #fff7ed;
+    border-left: 5px solid #f97316;
+    border-radius: 12px;
+    padding: 15px;
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.explanation h3 {
+    color: #c2410c;
+    margin-bottom: 6px;
+}
+
+.explanation p {
+    color: #444;
+    line-height: 1.5;
+}
+
+/* RISULTATO */
+
+.trophy {
+    font-size: 70px;
+    margin-bottom: 10px;
+}
+
+.final-score {
+    background: #ecfdf5;
+    color: #065f46;
+    padding: 18px;
+    border-radius: 15px;
+    font-size: 24px;
+    font-weight: bold;
+    margin: 20px 0;
+}
+
+/* TELEFONO */
+
+@media (max-width: 400px) {
+
+    body {
+        padding: 8px;
+    }
+
+    .screen {
+        padding: 20px 14px;
+        border-radius: 20px;
+    }
+
+    h1 {
+        font-size: 32px;
+    }
+
+    .question-box h2 {
+        font-size: 20px;
+    }
+
+    .answer {
+        font-size: 16px;
+        padding: 13px;
+    }
+
+    .info span {
+        font-size: 14px;
+    }
+}

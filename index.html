@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>🌍 Quiz Africa</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="app">
+
+        <section id="menu" class="screen">
+            <div class="logo">🌍</div>
+
+            <h1>Quiz Africa</h1>
+
+            <p>Metti alla prova la tua conoscenza dell'Africa!</p>
+
+            <div class="info">
+                <span>🧠 3 Livelli</span>
+                <span>❓ 20 Domande</span>
+                <span>⏱️ 60 Secondi</span>
+                <span>❤️ 5 Vite</span>
+            </div>
+
+            <button id="startButton">▶️ INIZIA</button>
+        </section>
+
+
+        <section id="quiz" class="screen hidden">
+
+            <div class="stats">
+                <span>❤️ <b id="lives">5</b></span>
+                <span>⭐ <b id="score">0</b></span>
+                <span>⏱️ <b id="timer">60</b></span>
+            </div>
+
+            <div class="timer-bar">
+                <div id="timerProgress"></div>
+            </div>
+
+            <p class="question-count">
+                Domanda <b id="questionNumber">1</b> / 20
+            </p>
+
+            <div class="level" id="level">
+                🌍 Livello 1
+            </div>
+
+            <div class="question-box">
+                <h2 id="question">Domanda</h2>
+            </div>
+
+            <div id="answers"></div>
+
+            <div id="explanation" class="explanation hidden">
+                <h3 id="resultMessage"></h3>
+                <p id="explanationText"></p>
+            </div>
+
+            <button id="nextButton">
+                ➡️ CONTINUA
+            </button>
+
+        </section>
+
+
+        <section id="result" class="screen hidden">
+
+            <div class="trophy">🏆</div>
+
+            <h1>Risultato</h1>
+
+            <p id="resultText"></p>
+
+            <div class="final-score">
+                ⭐ <span id="finalScore">0</span> punti
+            </div>
+
+            <button id="level2Button" class="hidden">
+                🔓 LIVELLO 2
+            </button>
+
+            <button id="level3Button" class="hidden">
+                🔓 LIVELLO 3
+            </button>
+
+            <button id="againButton" class="secondary">
+                🔄 RIGIOCA
+            </button>
+
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
